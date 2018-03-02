@@ -1,0 +1,27 @@
+&COLLINP corapp=1 lte=1 Nodens=4 notemp=8 mntmp=1 sDens=8 fDens=18 IC=0 worder=1 petol=-2 pops=1 wrngdn=700 wrngup=750 grad=0/
+&lIRA uplev=2 uplevl=1 lolev=3 lolevl=1 lopec=1 uppec=2 ppec=0 /
+!
+! Nodens = number of densities in loop
+!
+! Notemp = SET THIS EQUAL TO NUMBER IN ADF04
+!
+! mantmp = (Not sure why I did this yet) Can set a lower bound, i.e. use the 2nd energy in adf04
+!
+! sDens + fDens = start & finish, e.g. 10^2 -> 10^10 (integers relate to powers)
+!
+! IC = 1 intermediate coupling, or 0 for LS for the reading of ADF04
+!
+! popt = redundant at this time
+!
+! worder = 0 for no wavelength ordering. I’d recommend this to be zero unless you absolutely need them in order
+!
+! petol = some tolerance on the PEC absolute value. i.e. 10^(petol)
+!
+! wrngup + wrngdn = print a certain wavelength range for the PEC’s
+!
+! line = 1 is for a particular line ratio, e.g. uplev -> 1 / lolev -> 1
+!      = 0 for no line ratio
+! ppec = 1 for a particular PEC, defined by uppec and lopec
+! 
+! pops = 1 for all populations as a function of Ne and Te for contour plotting
+!      = 0 for nothing..

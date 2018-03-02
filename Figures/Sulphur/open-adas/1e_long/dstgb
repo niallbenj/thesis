@@ -1,0 +1,5 @@
+&STGB IOPT2=1 IRAD=1 IPERT=1 IPRINT=0 &END
+  0  2  0
+0.1 1.71 0.025
+ -1 -1 -1
+

@@ -1,0 +1,5 @@
+Standards for Figures on xmgrace:
+Axes Lables - 135
+Ticks - 100
+x -> 0.1 - >1.25
+y -> 0.08 -> 0.97
