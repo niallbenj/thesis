@@ -1,0 +1,3049 @@
+#LyX file created by tex2lyx 2.1
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding default
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+% Chapter 1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+chapter{Building a many electron model}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+% Main chapter title
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Chapter1"
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+% For referencing the chapter elsewhere, use 
+\backslash
+ref{Chapter1} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+lhead
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+Chapter 1. 
+\emph on
+Building a many electron model
+\emph default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+% This is for the header on each page - perhaps a shortened title
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%----------------------------------------------------------------------------------------
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Equation of motion
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:TISE"
+
+\end_inset
+
+ Throughout this work, we are going to require an accurate description of our system to simulate various processes. In order to achieve this, we must consider systems at the microscopic scale that obey Quantum Mechanics. Therefore, the wavefunction 
+\begin_inset Formula $\Ket{\psi_n(\mathbf{r},t)}$
+\end_inset
+
+ represents the eigenstates and 
+\begin_inset Formula $H$
+\end_inset
+
+ is the total energy operator for a given problem, that satisfies the Schrödinger equation, 
+\begin_inset Formula \begin{equation}\label{eq:TDSE}
+	H\Ket{\psi_n(\mathbf{r},t)}=i\hbar\frac{\partial\Ket{\psi_n(\mathbf{r},t)}}{\partial t},
+	\end{equation}
+\end_inset
+
+where 
+\begin_inset Formula $\mathbf{r}$
+\end_inset
+
+ denotes the ensemble of spatial co-ordinates. We shall leave the Hamiltonian operator undefined as we will discuss this in greater detail during Section (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:theham"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+The aim of this project is to obtain stationary states, where the system isindependent with respect to the time component of 
+\begin_inset Formula $\psi_n(\mathbf{r},t)$
+\end_inset
+
+, i.e. the state is unchanged for every value of 
+\begin_inset Formula $t$
+\end_inset
+
+, 
+\begin_inset Formula $\psi_n(\mathbf{r},t) =\psi_n(\mathbf{r})$
+\end_inset
+
+. Equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:TDSE"
+
+\end_inset
+
+) is simple to solve for the hydrogen atom or hydrogenic ions, but becomes complicated when expanding to include many electrons. Generally the time dependency can be dropped as we obtain identical results when considering a wavepacket with evolution time 
+\begin_inset Formula $t$
+\end_inset
+
+. We then make the assumption of separation of variables to solve (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:TDSE"
+
+\end_inset
+
+) by rewriting, 
+\begin_inset Formula \begin{equation}\label{eq:SOV}
+	\Ket{\psi_n(\mathbf{r},t)}=\Ket{\psi_n(\mathbf{r})\phi_n(t)}.
+	\end{equation}
+\end_inset
+
+Upon direct substitution of (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:SOV"
+
+\end_inset
+
+) into (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:TDSE"
+
+\end_inset
+
+) and selecting the separation constant as 
+\begin_inset Formula $E_n$
+\end_inset
+
+, it can be shown that if the 
+\begin_inset Formula $H$
+\end_inset
+
+ has a time independent potential energy operator 
+\begin_inset Formula $V(r)$
+\end_inset
+
+, then it is possible to determine stationary states of the problem, 
+\begin_inset Formula \begin{equation}\label{eq:TDwave}
+	\Ket{\psi_n(\mathbf{r},t)}=e^{-iE_nt/\hbar}\Ket{\psi_n(\mathbf{r})}.
+	\end{equation}
+\end_inset
+
+We can then arrive at the desired result, 
+\begin_inset Formula \begin{equation}\label{eq:TISE}
+	H\Ket{\psi_n(\mathbf{r})}=E_n\Ket{\psi_n(\mathbf{r})}.
+	\end{equation}
+\end_inset
+
+This is known as the time-independent Schrödinger equation. This eigenvalue equation has eigenvector solutions of 
+\begin_inset Formula $\Ket{\psi_n(\mathbf{r})}$
+\end_inset
+
+ with corresponding eigenvalues 
+\begin_inset Formula $E_n$
+\end_inset
+
+ for each state with index 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The solution of this equation is simple for one-electron systems and analytical solutions do exist and are readily obtainable. The solution can be determined by a separation of variables into a set of radial (r), and spherical (
+\begin_inset Formula $\theta, \phi$
+\end_inset
+
+) coordinates, 
+\begin_inset Formula \begin{equation}\label{eq:fullwave}
+	\Ket{\psi_{nlm_l}(\mathbf{r})}=\Ket{R(r)\Theta(\theta)\Phi(\phi)}=\Ket{R_{nl}(r)Y_{lm_l}(\theta,\phi)}.
+	\end{equation}
+\end_inset
+
+The wavefunction depends on a set of quantum numbers, 
+\begin_inset Formula $n$
+\end_inset
+
+, 
+\begin_inset Formula $l$
+\end_inset
+
+ and 
+\begin_inset Formula $m_l$
+\end_inset
+
+, which will become clearer in the following sections when we look at a particular energy operator 
+\begin_inset Formula $H$
+\end_inset
+
+. We combine the 
+\begin_inset Formula $\Theta$
+\end_inset
+
+ and 
+\begin_inset Formula $\Phi$
+\end_inset
+
+ components to construct the well known Spherical Harmonics, Y
+\begin_inset Formula $_{lm_l}$
+\end_inset
+
+ as these functions are easily calculated. They are simply Legendre polynomial expansions of cosine functions as their argument and therefore reduces the problem to solving for the radial component of the wavefunction, 
+\begin_inset Formula $R_{nl}(r)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+The Hamiltonian
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:theham"
+
+\end_inset
+
+ The Hamiltonian is a representation of the total energy for some system which can be constructed from its kinetic and potential energy, written below as, 
+\begin_inset Formula \begin{equation}\label{eq:TV1V2}
+	H=T+V_i=T(\mathbf{r})+V_1(\mathbf{r}) + V_2(\mathbf{r})
+	\end{equation}
+\end_inset
+
+where 
+\begin_inset Formula $T$
+\end_inset
+
+ is the kinetic energy operator and 
+\begin_inset Formula $V_1$
+\end_inset
+
+, 
+\begin_inset Formula $V_2$
+\end_inset
+
+ are two potential energy operators. Once we define appropriate forms for the kinetic and potential energy, we are then in a position to determine the Radial contribution of 
+\begin_inset Formula $R_{nl}(r)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+We can think of a simplistic model for an atomic system containing a few negatively charged electrons surrounding a positive nucleus. This is advantageous in understanding the concepts that are implemented for construction of larger, multi-electron systems. We must therefore consider the effects of three forces, namely the kinetic energy of the electrons, the Coulomb interaction between each orbiting electron and positive nucleus and finally, the repulsive force that the other electrons feel from one another. Obviously the electron-electron repulsion charge can be neglected completely, for one-electron systems.
+\end_layout
+
+\begin_layout Standard
+In order to proceed, we assume that the nucleus is infinitely heavy (a point mass) comparable to the mass of the remaining electrons present. To generalize further, we consider the system with a total of 
+\begin_inset Formula $N$
+\end_inset
+
+-electrons and nuclear charge denoted by 
+\begin_inset Formula $Z$
+\end_inset
+
+. The kinetic energy operator can be written as 
+\begin_inset Formula \begin{equation}\label{eq:T}
+	T=\sum_{i=1}^N-\frac{1}{2}\nabla_i^2,
+	\end{equation}
+\end_inset
+
+for each of the electrons 
+\begin_inset Formula $i$
+\end_inset
+
+, and therefore we sum over all 
+\begin_inset Formula $N$
+\end_inset
+
+ electrons. The Laplacian operator is also written in spherical polar coordinates to maintain consistency. Next we consider the interaction of the 
+\begin_inset Formula $i^{th}$
+\end_inset
+
+ electron with the infinitely heavy nucleus. This potential scales as one over the radial separation between the two particles 
+\begin_inset Formula \begin{equation}\label{eq:V1}
+	V_1=\sum_{i=1}^N-\frac{Z}{r_i},
+	\end{equation}
+\end_inset
+
+where 
+\begin_inset Formula $r_i$
+\end_inset
+
+ is the electron radius from the nucleus and the summation is over all the electrons again. And finally, the second Coulomb interaction which is that between each electron is given by 
+\begin_inset Formula \begin{equation}\label{eq:V2}
+	V_2=\sum_{i<j}^N\frac{1}{\mathbf{r}_{ij}},
+	\end{equation}
+\end_inset
+
+where 
+\begin_inset Formula $\mathbf{r}_{ij} = | \mathbf{r}_i - \mathbf{r}_j | $
+\end_inset
+
+. In total, the Hamiltonian is therefore the sum of the three equations (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:T"
+
+\end_inset
+
+), (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:V1"
+
+\end_inset
+
+), and (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:V2"
+
+\end_inset
+
+) and then by substituting into equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:TV1V2"
+
+\end_inset
+
+) to obtain, 
+\begin_inset Formula \begin{equation}\label{eq:ham}
+	H=\sum_{i=1}^N-\frac{1}{2}\nabla_i^2-\frac{Z}{r_i}+\sum_{i<j}^N\frac{1}{\mathbf{r}_{ij}}.
+	\end{equation}
+\end_inset
+
+Upon substitution of this into equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:TISE"
+
+\end_inset
+
+) and assuming separation of variables, we can finally solve this basic one electron problem, through means of trivial analytical methods.
+\end_layout
+
+\begin_layout Standard
+The radial and angular parts of equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:TISE"
+
+\end_inset
+
+) are then separable by a constant we define here by 
+\begin_inset Formula $l(l+1)$
+\end_inset
+
+. By rewriting the orbital angular momentum operators in terms of spherical co-ordinates, we can obtain the following eigenvalue equations, 
+\begin_inset Formula \[
+	\mathbf{L}^2Y_{lm_l}(\theta,\psi)=l(l+1)Y_{lm_l}(\theta,\psi)
+	\]
+\end_inset
+
+
+\begin_inset Formula \[
+	\mathbf{L}_zY_{lm_l}(\theta,\psi)=m_lY_{lm_l}(\theta,\psi)
+	\]
+\end_inset
+
+where 
+\begin_inset Formula $\mathbf{L}^2$
+\end_inset
+
+ is the total angular momentum operator squared and similarly 
+\begin_inset Formula $\mathbf{L}_z$
+\end_inset
+
+ is it's 
+\begin_inset Formula $z$
+\end_inset
+
+-component, both represented in spherical polar coordinates. This is where we first introduce the orbital angular momentum quantum number 
+\begin_inset Formula $l$
+\end_inset
+
+ and magnetic quantum number 
+\begin_inset Formula $m_l$
+\end_inset
+
+, which has an explicit dependence on 
+\begin_inset Formula $l$
+\end_inset
+
+, namely 
+\begin_inset Formula $-l \le m_l \le +l$
+\end_inset
+
+. From this, it is then possible to obtain the wavefunction 
+\begin_inset Formula $\psi(\mathbf{r},\theta,\phi)$
+\end_inset
+
+ in terms of the radial functions and spherical harmonics.
+\end_layout
+
+\begin_layout Standard
+The form of equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:ham"
+
+\end_inset
+
+) is usually an adequate description, but as 
+\begin_inset Formula $Z$
+\end_inset
+
+ increases, we must account for relativistic effects. This is due to the fact that the inner most electrons feel a much stronger attractive force from the nucleus. Therefore, assuming the importance of relativistic effects, we must look at the Dirac equation and solve it to obtain the Breit-Pauli Hamiltonian. We can now separate the relativistic and non-relativisitc contributions of the Hamiltonian in the following way, 
+\begin_inset Formula \begin{equation}\label{eq:hbp}
+	H_{\text{BP}}=H_{\text{NR}}+H_{\text{REL}}.
+	\end{equation}
+\end_inset
+
+
+\begin_inset Formula $H_{\text{NR}}$
+\end_inset
+
+ is simply that of equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:ham"
+
+\end_inset
+
+), and 
+\begin_inset Formula $H_{\text{REL}}$
+\end_inset
+
+ is defined by one and two body correction terms, which leads to further splittings of the energy levels. In order to keep the calculations to be discussed in Chapter (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cha:rmatrix"
+
+\end_inset
+
+) manageable, we will only be concerned with the one-body terms which are defined by, 
+\begin_inset Formula \begin{equation}\label{eq:bp1}
+	H_{\text{mc}}=-\frac{1}{8}\alpha^2\sum_{i=1}^N\nabla_i^4,
+	\end{equation}
+\end_inset
+
+
+\begin_inset Formula \begin{equation}\label{eq:bp2}
+	H_{\text{D}}=-\frac{1}{8}\alpha^2Z\sum_{i=1}^N\nabla_i^2\frac{1}{r_i},
+	\end{equation}
+\end_inset
+
+and 
+\begin_inset Formula \begin{equation}\label{eq:bp3}
+	H_{\text{SO}}=\frac{1}{2}\alpha^2\sum_{i=1}^N\frac{\mathbf{l}_i.\mathbf{s}_i}{r_i^3}.
+	\end{equation}
+\end_inset
+
+
+\begin_inset Formula $H_{\text{mc}}$
+\end_inset
+
+ is the mass correction term, 
+\begin_inset Formula $H_{\text{D}}$
+\end_inset
+
+ is the Darwin term and finally 
+\begin_inset Formula $H_{\text{SO}}$
+\end_inset
+
+ is the spin-orbit term which deals with the coupling between the spin and orbital angular momentum of all each electron. 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ is the fine structure constant and 
+\begin_inset Formula $\mathbf{l}_i$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{s}_i$
+\end_inset
+
+ are the spin and orbital angular momentum of the 
+\begin_inset Formula $i^{\text{th}}$
+\end_inset
+
+ electron. The two body terms can of course be included as an extension to equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:hbp"
+
+\end_inset
+
+), but the corrections are generally not significant enough for our purpose. The disadvantage of using equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:hbp"
+
+\end_inset
+
+) over the non-relativistic approach is that it does not commute with the operators 
+\begin_inset Formula $\mathbf{L}^2$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{L}_z$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{S}^2$
+\end_inset
+
+, and 
+\begin_inset Formula $\mathbf{S}_z$
+\end_inset
+
+ due to the additional coupling correction in equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:bp3"
+
+\end_inset
+
+). Informally, this means that 
+\begin_inset Formula $l$
+\end_inset
+
+ and 
+\begin_inset Formula $s$
+\end_inset
+
+ are referred to as `bad' quantum numbers and we are forced to introduce a new operator that will commute with 
+\begin_inset Formula $H_{REL}$
+\end_inset
+
+. The relativistic form of the operator is just the addition of equations (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:bp1"
+
+\end_inset
+
+), (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:bp2"
+
+\end_inset
+
+) and (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:bp3"
+
+\end_inset
+
+), 
+\begin_inset Formula \begin{equation}\label{eq:hrel}
+	H_{REL}=H_{mc}+H_D+H_{SO}.
+	\end{equation}
+\end_inset
+
+An accurate description of the system is clearly essential, and equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:hrel"
+
+\end_inset
+
+) provides a useful energy operator. For more complex systems, we must obtain approximate wavefunction expansions by applying numerical techniques. The following sections discuss various approaches with the Hamiltonian operators defined so far.
+\end_layout
+
+\begin_layout Section
+Many electron systems
+\end_layout
+
+\begin_layout Standard
+We begin this Section by reiterating the difficulty in obtaining a solution to equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:TISE"
+
+\end_inset
+
+). Care must be taken to calculate approximate solutions of the wavefunction using numerical methods. In this section we will detail multiple methods to determine a many electron wavefunction. The approximations considered here are the Central field approximation and Hartree-Fock approximation which are then extended to consider the configuration-interaction method.
+\end_layout
+
+\begin_layout Subsection
+Central field approximation 
+\begin_inset Formula $\&$
+\end_inset
+
+ Hartrees method
+\end_layout
+
+\begin_layout Standard
+We have provided the form of the Hamiltonian operators for semi-relativistic and non-relativistic cases. To describe the following concepts in this Section, we neglect the one-body correction terms. Therefore we will consider 
+\begin_inset Formula $H_{\text{NR}}$
+\end_inset
+
+ from equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:ham"
+
+\end_inset
+
+) for a many electron system that contains 
+\begin_inset Formula $N$
+\end_inset
+
+-electrons and nuclear charge denoted by 
+\begin_inset Formula $Z$
+\end_inset
+
+. As we have already discussed, this equation is not easily separable into 
+\begin_inset Formula $N$
+\end_inset
+
+ total equations due to the electron-electron repulsion term.
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+% NEED TO MOVE THIS SOMEWHERE ELSE...
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%Therefore, the equation that we will be required to work with is that of the TISE (
+\backslash
+ref{TISE}) where we now replace $%
+\backslash
+psi(
+\backslash
+mathbf{r})$ by $
+\backslash
+psi(q_1,q_2,...,q_N)$. Here, the various $q_i$ denotes both the spatial and spin coordinates of %the $i^{
+\backslash
+protect
+\backslash
+text{th}}$ electron. This new N-electron wavefunction $
+\backslash
+psi(q_1,...q_N)$ is completely antisymmetric %due to the indistinguishability of the electrons. Therefore $
+\backslash
+psi$ is invariant under a change of ordinates, e.g. if %$q_1
+\backslash
+rightarrow q_2$ and $q_2
+\backslash
+rightarrow q_1$.
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+% END
+\end_layout
+
+\end_inset
+
+To apply the central field approximation, we consider perturbation theory through a more indirect approach. We also assume that each electron in the system feels an identical potential which is represented by the attractive potential of the nucleus. This means that the potential only depends radially on the distance between the nucleus and the 
+\begin_inset Formula $i^{\text{th}}$
+\end_inset
+
+ electron. A consequence of this is that 
+\begin_inset Formula $\sum_{i<j}\frac{1}{r_{ij}}$
+\end_inset
+
+ must contain a large spherically symmetric part. We know that each electron feels a combined force of the Coulomb attraction and electron-electron repulsion. To simplify things, we think of an average `screening' effect which we denote as 
+\begin_inset Formula $V_{s}(r_i)$
+\end_inset
+
+ depending only on the radial coordinate.
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%We consider the $i^{
+\backslash
+protect
+\backslash
+text{th}}$ electron in which the distance $r_i$ is both small and large from the nucleus compared to the remaining electrons. This provides a good starting point for the many electron system as the intermediate distances for $r_i$ become problematic.
+\end_layout
+
+\end_inset
+
+We construct, or rather, redefine a new Hamiltonian consisting of an unperturbed 
+\begin_inset Formula $(H_1)$
+\end_inset
+
+ and a perturbed part 
+\begin_inset Formula $(H_2)$
+\end_inset
+
+, 
+\begin_inset Formula \begin{equation}\label{eq:hampert}
+	H=H_1+H_2
+	\end{equation}
+\end_inset
+
+where we simply reformulate by setting 
+\begin_inset Formula \begin{equation}\label{eq:cfham}
+ H_1 = \sum_i \frac{1}{2}\nabla_i^2 - V_s(r_i)
+\end{equation}
+\end_inset
+
+and, 
+\begin_inset Formula \[
+H_2 = sum_i ... .
+\]
+\end_inset
+
+Now the major contribution is contained within 
+\begin_inset Formula $H_1$
+\end_inset
+
+ and therefore the effects of 
+\begin_inset Formula $H_2$
+\end_inset
+
+ are negligible compared to 
+\begin_inset Formula $H_1$
+\end_inset
+
+ (
+\begin_inset Formula $H_2$
+\end_inset
+
+ 
+\begin_inset Quotes ard
+\end_inset
+
+ 
+\begin_inset Formula $H_1$
+\end_inset
+
+). We haven't introduced anything new as we have adopted this approach already, e.g. by looking at equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:hbp"
+
+\end_inset
+
+), we can see that the non-relativistic part and relativistic part represent an unperturbed and perturbed part of the total Hamiltonian respectively. As an initial approximation we disregard the perturbation 
+\begin_inset Formula $H_2$
+\end_inset
+
+ and focus on the central field Hamiltonian, which is precisely that of (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:cfham"
+
+\end_inset
+
+). At this stage it looks like nothing has changed from our original arguments, but now we actually do know the form of 
+\begin_inset Formula $V_s(r_i)$
+\end_inset
+
+ in its limiting cases. 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+protect
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $r_i \rightarrow 0$
+\end_inset
+
+:
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+protect
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $r_i \rightarrow \infty$
+\end_inset
+
+:
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This asserts some boundary conditions which helps drastically in obtaining a corresponding wavefunction, making it possible to obtain 
+\begin_inset Formula $N$
+\end_inset
+
+ separable equations to solve. Combining this Hamiltonian with equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:TISE"
+
+\end_inset
+
+) and some wavefunction of the form 
+\begin_inset Formula $\psi=\psi_1({\mathbf{r}_1,...\mathbf{r}_N})$
+\end_inset
+
+ denoted as the unique central field/Hartree's wavefunction, then 
+\begin_inset Formula \[
+	\sum_{i=1}^N\Big[-\frac{1}{2}\nabla_{\mathbf{r}_i}^2+V(\mathbf{r}_i)\Big]\psi_1=E_1\psi_1.
+	\]
+\end_inset
+
+This particular equation eliminates the complications arising from the electron-electron repulsion and now becomes separable into a total of 
+\begin_inset Formula $N$
+\end_inset
+
+ equations. The solution is therefore written as a product of one electron orbitals in terms of the quantum numbers 
+\begin_inset Formula $n_i$
+\end_inset
+
+, 
+\begin_inset Formula $l_i$
+\end_inset
+
+ and 
+\begin_inset Formula $m_{l_i}$
+\end_inset
+
+ for the 
+\begin_inset Formula $i^{\text{th}}$
+\end_inset
+
+ electron, 
+\begin_inset Formula \begin{equation}\label{eq:hartreeswf}
+	\psi_1({\mathbf{r}_1,...\mathbf{r}_N})=u_{n_{1}l_{1}m_{l_{1}}}(\mathbf{r}_1)...u_{n_{N}l_{N}m_{l_{N}}}(\mathbf{r}_N)
+	\end{equation}
+\end_inset
+
+To complete these one-electron orbital functions, we multiply each one by a spin function. The spin function depends on both quantum numbers, 
+\begin_inset Formula $s$
+\end_inset
+
+ and 
+\begin_inset Formula $m_s$
+\end_inset
+
+where 
+\begin_inset Formula $s=1/2$
+\end_inset
+
+ and 
+\begin_inset Formula $m_s = \pm 1/2$
+\end_inset
+
+. We can therefore write, 
+\begin_inset Formula \begin{equation}\label{orbitals}
+	\begin{split}
+	u_{nlm_{l}m_{s}}(\mathbf{q})= & u_{nlm_{l}}(\mathbf{r})\chi_{1/2,m_{s}}\\
+	= & R_{nl}(r)Y_{lm_{l}}(\theta,\phi)\chi_{1/2,m_{s}}\\
+	= & \frac{1}{r}P_{nl}(r)Y_{lm_{l}}(\theta,\phi)\chi_{1/2,m_{s}}\\
+	\end{split}
+	\end{equation}
+\end_inset
+
+completing the final form of Hartrees wavefunction defined in equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:hartreeswf"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Subsection
+Hartree-Fock approximation
+\end_layout
+
+\begin_layout Standard
+We see that the Hartree-Fock approximation is based on an independent particle model. The major problem that arises from Hartree's initial assumption is due to the fact that the wavefunction is not antisymmetric in both spin and spatial coordinates in accordance to the interchange of any two electrons. This of course is prohibited due to the effect of the Pauli exclusion principle which is expressed by the following statement,
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+protect
+\end_layout
+
+\end_inset
+
+
+\shape italic
+
+\begin_inset Quotes eld
+\end_inset
+
+No particles with spin-1/2 may contain identical quantum numbers 
+\begin_inset Formula $n, l, m_l, m_s$
+\end_inset
+
+ simultaneously.
+\shape default
+
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In order to overcome this problem with Hartree's initial wavefunction in equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:hartreeswf"
+
+\end_inset
+
+), Fock and Slater proposed a remedy by rewriting 
+\begin_inset Formula $\psi$
+\end_inset
+
+ in terms of an 
+\begin_inset Formula $N\times N$
+\end_inset
+
+ dimensional Slater determinant, 
+\begin_inset Formula \begin{equation}\label{eq:slaterdet}
+	\psi(q_1,..,q_N) = \frac{1}{\sqrt{N!}}\left| \begin{array}{cccc}
+	u_{\alpha_1}(q_1) & u_{\alpha_2}(q_1) & ... & u_{\alpha_\nu}(q_1)\\
+	u_{\alpha_1}(q_2) & u_{\alpha_2}(q_2) & ... & u_{\alpha_\nu}(q_2)\\
+	\vdots & \vdots & \ddots & \vdots \\
+	u_{\alpha_1}(q_N) & u_{\alpha_2}(q_N) & ... & u_{\alpha_\nu}(q_N) \end{array} \right|.
+	\end{equation}
+\end_inset
+
+Each 
+\begin_inset Formula $\alpha_1, \alpha_2, ... , \alpha_\nu$
+\end_inset
+
+ denote a set of 4 quantum numbers 
+\begin_inset Formula $\{n, l, m_l, m_s\}$
+\end_inset
+
+ in accordance with the Pauli exclusion principle. The factor in front of the determinant is to ensure the wavefunction is to be normalized to unity. It is also required that 
+\begin_inset Formula $u_{\alpha_{\lambda}}(\mathbf{r})$
+\end_inset
+
+ in equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:slaterdet"
+
+\end_inset
+
+) are orthonormal to one another such that, 
+\begin_inset Formula \[
+	\Braket{u_\lambda | u_\mu} = \int u_\lambda^*(q)u_\mu(q)dq = \delta_{\lambda\mu}
+	\]
+\end_inset
+
+where the integral is over all spatial co-ordinates and, 
+\begin_inset Formula \[
+	\Braket{\chi | \chi} = \sum_{m_s=-1/2}^{m_s =+1/2}  = \delta.
+	\]
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The ground state of atomic Ne has the electronic configuration 
+\begin_inset Formula $1s^22s^22p^6$
+\end_inset
+
+, each subshell being completely full. There are 10 unique possibilities for the quantum numbers to be distributed (
+\begin_inset Formula $\nu=10$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+The antisymmetric properties arise from the interchange of two rows or two columns, which results in the change of sign of the wavefunction. Another violation occurs when a set of quantum numbers are equal to each other (
+\begin_inset Formula $\alpha_i=\alpha_j$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+We can attempt to obtain an optimal Slater Determinant by consideration of the non-relativistic Hamiltonian 
+\begin_inset Formula $H_{\text{NR}}$
+\end_inset
+
+, from equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Ham"
+
+\end_inset
+
+). In the central field approximation, it was possible to alter the Hamiltonian in such a way to apply perturbation theory. Another approximate method that can be applied whenever it is difficult to find a good description of an unperturbed Hamiltonian is the variational principle. We assume some trial wavefunction with adjustable (variational) parameters and we optimize these parameters until the wavefunction is minimized. The approximate energy functional corresponding some trial wavefunction 
+\begin_inset Formula $\Phi$
+\end_inset
+
+ is given by, 
+\begin_inset Formula \begin{equation}\label{varmethod}
+	E_0\leq E[\Phi]= \frac{\Braket{\Phi |H|\Phi}}{\Braket{\Phi |\Phi}}
+	\end{equation}
+\end_inset
+
+which provides an upper bound to the ground state energy 
+\begin_inset Formula $E_0$
+\end_inset
+
+. The reason for applying this Variational method is to deduce the unknown radial functions, 
+\begin_inset Formula $P_{nl}(r)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The minimisation is subject to the orthonormality constraints. The functional 
+\begin_inset Formula $E[\psi]$
+\end_inset
+
+ in equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "varmethod"
+
+\end_inset
+
+), is then stationary with respect to small variations of the orbitals 
+\begin_inset Formula $u_\lambda$
+\end_inset
+
+ for each 
+\begin_inset Formula $\lambda=\alpha_1, \alpha_2,..., \alpha_\nu$
+\end_inset
+
+. By applying a small change to equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "varmethod"
+
+\end_inset
+
+) we obtain 
+\begin_inset Formula \[
+	\delta E-\sum^N_{\lambda = \alpha_1}\sum^N_{\mu = \alpha_1}\mathcal{L}_{\lambda\mu}\delta\Braket{u_\mu |u_\lambda}=0,
+	\]
+\end_inset
+
+where we have introduced 
+\begin_inset Formula $N^2$
+\end_inset
+
+ Lagrange multipliers, 
+\begin_inset Formula $\mathcal{L}_{\lambda\mu}$
+\end_inset
+
+. It is possible to obtain a new diagonal matrix of Lagrange multipliers by performing a unitary transformation on the spin orbitals, 
+\begin_inset Formula $U\mathcal{L} = \mathcal{L}??$
+\end_inset
+
+ and therefore 
+\begin_inset Formula $\mathcal{L}_{\lambda\mu} = \mathcal{L}_{\lambda}$
+\end_inset
+
+. A new set of 
+\begin_inset Formula $N$
+\end_inset
+
+ integro-differential equations can be obtained, 
+\begin_inset Formula \begin{equation}
+	\Big[-\frac{1}{2}\nabla_{\mathbf{r}_i}^2+\mathcal{V}(q_i)\Big]u_\lambda(q_i)=E_\lambda u_\lambda(q_i)
+	\end{equation}
+\end_inset
+
+which take the similar form of equation (..) and where the new potential 
+\begin_inset Formula $\mathcal{V}(q_i)$
+\end_inset
+
+ is defined as, 
+\begin_inset Formula \[
+	\mathcal{V}(q_i)=-\frac{Z}{r_i}+\sum_{\mu}\int u_\lambda^*(\mathbf{r}_j)\frac{1}{r_{ij}}u_\lambda(\mathbf{r}_j)d\mathbf{r}_j-\sum_\lambda ...
+	\]
+\end_inset
+
+We note here that we have expressed 
+\begin_inset Formula $\mathcal{V}(q_i)$
+\end_inset
+
+ in terms of the spatial one-electron orbitals by using the orthonormality property of the spin functions as defined in equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:orthospin"
+
+\end_inset
+
+). These equations are known as the Hartree-Fock equations and are obtained by performing iterative techniques. At each step, the Hartree-Fock equations are solved numerically before proceeding. The first summation is normally referred to the direct potential and the second as the exchange potential, as it accounts for the contribution due to the exchange of orbitals.
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+protect
+\end_layout
+
+\end_inset
+
+
+\size large
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+
+\shape italic
+Self-consistent field method
+\shape default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\size default
+
+\begin_inset Newline newline
+\end_inset
+
+ To solve the set of equations in (...), we briefly outline an iterative procedure known as the self-consistent field method that can be applied. We have already stated that the Hartree-Fock equations (...) are not easily solvable. The complication arises from the direct dependence of the orbitals through the potential 
+\begin_inset Formula $\mathcal{V}(\mathbf{r}_i)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+We will denote the superscript 
+\begin_inset Formula $c$
+\end_inset
+
+ of 
+\begin_inset Formula $u^{(c)}_{\alpha_i}$
+\end_inset
+
+ as the number of iterations performed. By starting with an appropriate approximation for the spin-orbitals 
+\begin_inset Formula $u_{\alpha_1}^{(1)}, u_{\alpha_2}^{(1)}, ... , u_{\alpha_\nu}^{(1)}$
+\end_inset
+
+ we can then determine 
+\begin_inset Formula $\mathcal{V}^{(1)}$
+\end_inset
+
+ and therefore produce a new set of 
+\begin_inset Formula $u_{\alpha_1}^{(2)}, u_{\alpha_2}^{(2)}, ... , u_{\alpha_\nu}^{(2)}$
+\end_inset
+
+. The process will terminate when 
+\begin_inset Formula $\mathcal{V}^{(c)}=\mathcal{V}^{(c+1)}$
+\end_inset
+
+ and therefore the orbitals themselves will remain unchanged.
+\end_layout
+
+\begin_layout Standard
+One way to represent the radial functions is by a linear combination of analytical basis functions, 
+\begin_inset Formula \begin{equation}\label{eq:boundorbs}
+	P_{nl}(r)=\sum_{j=1}^kc_{jnl}r^{I_{jnl}}e^{-\eta_{jnl}r}
+	\end{equation}
+\end_inset
+
+where 
+\begin_inset Formula $c_{jnl}$
+\end_inset
+
+, 
+\begin_inset Formula $I_{jnl}$
+\end_inset
+
+ and 
+\begin_inset Formula $\eta_{jnl}$
+\end_inset
+
+ are coefficients. These are known as Slater Type Orbitals and describe the general radial form of the wavefunction. The summation grants additional flexibility to their form, with the exponential part accurately describing the cusp at small 
+\begin_inset Formula $r$
+\end_inset
+
+, i.e. close to the nucleus. We will refer to and implement these Hartree-Fock orbitals in future calculations when constructing atomic models. A large tabulation of these are also available in the tables of Clementi and Roetti, with details of the calculations therein.
+\end_layout
+
+\begin_layout Subsection
+The Configuration Interaction (CI) Method:
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%In order to determine the resulting HF equations, we have adopted a variational method, and at the beginning we assumed the trial wavefunction to take the form of a Slater-Determinant (
+\backslash
+ref{slaterdet}). For a given state we denote the energy and wavefunction as $E_{
+\backslash
+protect
+\backslash
+text{HF}}$ and $
+\backslash
+Psi_{
+\backslash
+protect
+\backslash
+text{HF}}$ respectively. Unfortunately, these are just approximations to the exact energy and wavefunction which we shall note by  $E_{
+\backslash
+protect
+\backslash
+text{ex}}$ and $
+\backslash
+Psi_{
+\backslash
+protect
+\backslash
+text{ex}}$ respectively. Albeit, this is a very powerful and accurate approximation, however we shall still denote the correction to the energy as,
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%	
+\backslash
+begin{equation}
+\backslash
+label{correlatione}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%	E_{
+\backslash
+protect
+\backslash
+text{corr}}=E_{
+\backslash
+protect
+\backslash
+text{ex}}-E_{
+\backslash
+protect
+\backslash
+text{HF}}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%	
+\backslash
+end{equation}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%where $E_{
+\backslash
+protect
+\backslash
+text{corr}}$ is known as the correlation energy. This correlation energy represents the energy arising from the non relativistic Hamiltonian, as we have yet to extend to include any relativistic Hamiltonian operators. 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We introduce the configuration-interaction method to account for electron correlation effects, corresponding to a better description of the wavefunction. Therefore, 
+\begin_inset Formula $\Psi_{HF}$
+\end_inset
+
+ can be extended to obtain an even more accurate wavefunction. We begin by considering the angular momentum rules of Russell-Saunders, known as 
+\begin_inset Formula $LS\pi$
+\end_inset
+
+-coupling. In essence, the method involved is concerned with interaction from the mixing of various energy states with similar total angular momentum.
+\end_layout
+
+\begin_layout Standard
+To account for the electron correlation, we must construct a linear combination of configuration state functions. These CSF's denote some representation of electrons that reside in specific orbitals, having a value for 
+\begin_inset Formula $n$
+\end_inset
+
+ and 
+\begin_inset Formula $l$
+\end_inset
+
+ and holding true to the Pauli exclusion principle. Each of these CSF's in turn are constructed from a linear combination of Slater-Determinants. Therefore we can write, 
+\begin_inset Formula \begin{equation}\label{CSFLS}
+	\Psi(LS\pi)=\sum_{i=1}^Mc_i\Phi_i(\alpha_iLS\pi)
+	\end{equation}
+\end_inset
+
+where each CSF is denoted by 
+\begin_inset Formula $\Phi_i(\alpha_iLS\pi)$
+\end_inset
+
+ and the total wavefunction as 
+\begin_inset Formula $\Psi(LS\pi)$
+\end_inset
+
+, and 
+\begin_inset Formula $L$
+\end_inset
+
+, 
+\begin_inset Formula $S$
+\end_inset
+
+ and 
+\begin_inset Formula $\pi$
+\end_inset
+
+ being the total orbital and spin angular momenta and the parity of a specific term. A better approximation of 
+\begin_inset Formula $\Psi(LS\pi)$
+\end_inset
+
+ will carry an infinite summation, but for practical reasons we terminate with a finite value for 
+\begin_inset Formula $M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The coefficients 
+\begin_inset Formula $c_i$
+\end_inset
+
+ are then the weighted contributions from the individual CSF's to the total wavefunction, and 
+\begin_inset Formula $\alpha_i$
+\end_inset
+
+ represent how the electrons individual 
+\begin_inset Formula $l$
+\end_inset
+
+ and 
+\begin_inset Formula $s$
+\end_inset
+
+ results in a total 
+\begin_inset Formula $L$
+\end_inset
+
+ and 
+\begin_inset Formula $S$
+\end_inset
+
+. Therefore we require two things; optimised coefficients and CSF's to obtain an accurate total state representation. A similar expression can be written for 
+\begin_inset Formula $\Psi(J\pi)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+protect
+\end_layout
+
+\end_inset
+
+
+\size large
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+
+\shape italic
+Optimization of 
+\begin_inset Formula $c_i$
+\end_inset
+
+'s
+\shape default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\size default
+
+\begin_inset Newline newline
+\end_inset
+
+ The first stage is to determine the set of coefficients 
+\begin_inset Formula $\{c_i\}$
+\end_inset
+
+. By considering the variational principle again, we can keep the 
+\begin_inset Formula $\Phi$
+\end_inset
+
+'s fixed (which we still do not know) while the coefficients constitute the variational parameters. Assuming 
+\begin_inset Formula $\Psi(LS\pi)$
+\end_inset
+
+ in equation (...) as our total wavefunction for a particular state, and the variational principle as defined in equation (..), we can obtain, 
+\begin_inset Formula \[
+\delta [ \sum \sum ] = 0 ... .
+\]
+\end_inset
+
+Therefore, each 
+\begin_inset Formula $E_i$
+\end_inset
+
+ represents the Lagrange multipliers this time and also the eigenvalues of the Hamiltonian matrix 
+\begin_inset Formula $\Braket{\Phi_i | H | \Phi_j}$
+\end_inset
+
+, with corresponding eigenvector components 
+\begin_inset Formula $\{c_i\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+protect
+\end_layout
+
+\end_inset
+
+
+\size large
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+
+\shape italic
+Optimization of 
+\begin_inset Formula $\Phi_i$
+\end_inset
+
+'s
+\shape default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\size default
+
+\begin_inset Newline newline
+\end_inset
+
+ We have defined our basis expansion to have a total of 
+\begin_inset Formula $M$
+\end_inset
+
+ CSF's to describe a particular wavefunction, 
+\begin_inset Formula $\Psi(LS\pi)$
+\end_inset
+
+. The corresponding set of eigenvalues for a basis set of size 
+\begin_inset Formula $M$
+\end_inset
+
+ can be easily ordered in the following way, 
+\begin_inset Formula \[
+E_1^{(M)} < ... < E_M^{(M)}.
+\]
+\end_inset
+
+Then by including an additional CSF, 
+\begin_inset Formula $\Phi_{(M+1)}$
+\end_inset
+
+, we can also order the corresponding 
+\begin_inset Formula $E_i^{(M+1)}$
+\end_inset
+
+. The Hylleraas-Undheim theorem states that we can interleave these as follows, 
+\begin_inset Formula \[
+ ... < E_{i-1}^{(M)} < E_i^{(M+1)} < E_i^{(M)}  < E_{i+1}^{(M+1)} < ...
+\]
+\end_inset
+
+From equation (...) it is clear that if 
+\begin_inset Formula $M \rightarrow \infty $
+\end_inset
+
+, then we obtain an upper bound for the exact energy, 
+\begin_inset Formula \[
+E_i^{(M)} > E_i^{(exact)}
+\]
+\end_inset
+
+which minimizes for all excited states 
+\begin_inset Formula $i$
+\end_inset
+
+. It should also be mentioned that for the above, we have written 
+\begin_inset Formula $E_1$
+\end_inset
+
+ as the ground state for notation and convenience only.
+\end_layout
+
+\begin_layout Section
+Transition probabilities
+\end_layout
+
+\begin_layout Standard
+Up to now we have been focused on obtaining ways to describe the wavefunctions for as many states as possible. The next step is to consider what happens when some transition between these states takes place. We begin by considering some of the mechanisms below.
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+protect
+\end_layout
+
+\end_inset
+
+
+\size large
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+
+\shape italic
+Spontaneous emission
+\shape default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\size default
+
+\begin_inset Newline newline
+\end_inset
+
+ Suppose that we have a total of 
+\begin_inset Formula $N_j$
+\end_inset
+
+ atoms, where the subscript represents the number in that particular state 
+\begin_inset Formula $\Ket{j}$
+\end_inset
+
+. Then the rate of change can be written as 
+\begin_inset Formula \[
+\frac{d N_j}{dt} = - \sum_iA_{j \rightarrow i}N_j,
+\]
+\end_inset
+
+which is easily solvable for 
+\begin_inset Formula $N_j$
+\end_inset
+
+. Furthermore, the lifetime of 
+\begin_inset Formula $\Ket{j}$
+\end_inset
+
+ before radiative decay is defined as, 
+\begin_inset Formula \[
+\tau_j = \frac{1}{\sum_i^{j-1}A_{j \rightarrow i}}
+\]
+\end_inset
+
+which is just the time it takes for some state 
+\begin_inset Formula $\Ket{j}$
+\end_inset
+
+ to decay (i.e. lose energy) to any of the remaining 
+\begin_inset Formula $(j-1)$
+\end_inset
+
+ states below it.
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+protect
+\end_layout
+
+\end_inset
+
+
+\size large
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+
+\shape italic
+Stimulated emission 
+\begin_inset Formula $\&$
+\end_inset
+
+ absorption
+\shape default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\size default
+
+\begin_inset Newline newline
+\end_inset
+
+ We also must account for external influences on the system that can alter the internal energy. The first that we describe is known as stimulated emission, 
+\begin_inset Formula $B_{j \rightarrow i}$
+\end_inset
+
+, which is similar to the decay rate, but energy is lost from the system as a transition occurs in the form of a photon. The second is known as stimulated absorption, where the system gains an amount of energy and therefore excited states can be reached, and is written similarly as 
+\begin_inset Formula $B_{i \rightarrow j}$
+\end_inset
+
+. This occurs due to the presence of an isotropic, external radiation field and we assume that its energy per unit volume is 
+\begin_inset Formula $\rho(\nu)d\sigma$
+\end_inset
+
+. Therefore the rate that atoms in state 
+\begin_inset Formula $\Ket{j}$
+\end_inset
+
+ are stimulated to the level 
+\begin_inset Formula $\Ket{i}$
+\end_inset
+
+ at the following rate, 
+\begin_inset Formula \[
+\frac{d N_j}{dt} = - B_{j \rightarrow i}N_j\rho(\nu_{j \rightarrow i}).
+\]
+\end_inset
+
+Then the absorption of atoms in a state 
+\begin_inset Formula $\Ket{i}$
+\end_inset
+
+ to a higher state 
+\begin_inset Formula $\Ket{j}$
+\end_inset
+
+ are given by the rate, 
+\begin_inset Formula \[
+\frac{d N_i}{dt} = - B_{i \rightarrow j}N_i\rho(\nu_{j \rightarrow i}).
+\]
+\end_inset
+
+Assuming detailed balance, we must have equality between the rate of absorption and stimulated plus spontaneous emission between two states. This allows us to relate the following, 
+\begin_inset Formula \[
+A_{j \rightarrow i} = ...check, 
+\]
+\end_inset
+
+and the stimulated coefficients are also related by the ratio of statistical weights, 
+\begin_inset Formula \[
+B_{j \rightarrow i} = \frac{g_i}{g_j}B_{i \rightarrow j}.
+\]
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Oscillator strengths
+\end_layout
+
+\begin_layout Standard
+Another useful quantity is known as the oscillator strength, which measures the strength of absorption between a lower state 
+\begin_inset Formula $\Ket{i}$
+\end_inset
+
+ to a high lying state 
+\begin_inset Formula $\Ket{j}$
+\end_inset
+
+. This newly defined oscillator strength can be rewritten in terms of the absorption coefficient, 
+\begin_inset Formula \begin{equation}\label{eq:fwithb}
+f_{ij} = \frac{\mu}{\pi e^2}h\nu_{ji}B_{ij},
+\end{equation}
+\end_inset
+
+where 
+\begin_inset Formula $\mu$
+\end_inset
+
+ and 
+\begin_inset Formula $e$
+\end_inset
+
+ are the reduced mass and electronic charge of the electron respectively. In atomic units these quantities are set to unity. This allows us to obtain a relationship between the emission oscillator strength and absorption oscillator strength by substituting equation (...) into equation (..), 
+\begin_inset Formula \[
+f_{ij} = -\frac{g_j}{g_i}f_{ji}.
+\]
+\end_inset
+
+Also from equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:fwithb"
+
+\end_inset
+
+), the relationship between the absorption provides another useful relationship between the transition probability by applying equation (...) and equation (...), 
+\begin_inset Formula \[
+f_{ij} = \frac{g_j}{g_i}\frac{\mu c^3}{8\pi^2 e^2 \nu_{ji}^2}A_{ji}.
+\]
+\end_inset
+
+This direct proportionality indicates that for transitions that are more likely to occur, then the strength of the line increases, as one would expect. Since the transition probability is better referred to as a rate, we must consider a time-dependent wavefunction expansion to express transitions between states. This is introduced through an external radiation field, where one such example can be written as 
+\begin_inset Formula \[
+\boldsymbol{A_0}\cos(\omega t - \boldsymbol{k} \cdot \boldsymbol{r})
+\]
+\end_inset
+
+for an electric dipole transition. 
+\begin_inset Formula $\boldsymbol{A_0}$
+\end_inset
+
+ is the amplitude of the radiation field and 
+\begin_inset Formula $\boldsymbol{k}$
+\end_inset
+
+ is defined as the wavenumber, 
+\begin_inset Formula \[
+k = ...
+\]
+\end_inset
+
+To apply time-dependent perturbation theory, we can think of the radiation field as a small perturbation, and then expand the unperturbed part of the total wavefunction as 
+\begin_inset Formula \[
+\Psi = \sum_j c_j(t) \psi_j e^{-iE_jt},
+\]
+\end_inset
+
+together with the corresponding absorption coefficient, 
+\begin_inset Formula \begin{equation}\label{eq:bstrength}
+B_{ij} = \frac{2}{3}\frac{c^2 \pi}{h^2 \nu_{ji}^2} \Bigg | \Braket{\psi_j | \frac{e}{\mu c}\sum_j\boldsymbol{p}_je^{i\boldsymbol{k} \cdot \boldsymbol{r}} | \psi_i} \Bigg |^2.
+\end{equation}
+\end_inset
+
+The summation is carried over each electron in the system and 
+\begin_inset Formula $\boldsymbol{p}_j$
+\end_inset
+
+ corresponds to the momentum of electron 
+\begin_inset Formula $j$
+\end_inset
+
+. We already have a relationship between 
+\begin_inset Formula $B_{ij}$
+\end_inset
+
+ and 
+\begin_inset Formula $f_{ij}$
+\end_inset
+
+, so finding an expression for the oscillator strength is straight forward, but the difficulty arises due to the form of the exponential function. We can relax this complication by Taylor expanding the function and considering the dipole approximation, 
+\begin_inset Formula \[
+e^{i\boldsymbol{k} \cdot \boldsymbol{r}} = 1 + i\boldsymbol{k} \cdot \boldsymbol{r} + ... \approx 1.
+\]
+\end_inset
+
+This seems like a big assumption to make, but in actual fact it is quite reasonable, as 
+\begin_inset Formula $\langle \boldsymbol{k} \cdot \boldsymbol{r} \rangle \ll 1$
+\end_inset
+
+. The magnitude of 
+\begin_inset Formula $\boldsymbol{r}$
+\end_inset
+
+ is typical of a few angstroms, compared to the magnitude of 
+\begin_inset Formula $\boldsymbol{k}$
+\end_inset
+
+ defined in equation (...), which contains a 
+\begin_inset Formula $1/\lambda_{ji}$
+\end_inset
+
+ term where 
+\begin_inset Formula $\lambda_{ji}$
+\end_inset
+
+ is typical of a few hundred to many thousand angstroms. Therefore by combining equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:bstrength"
+
+\end_inset
+
+) and equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:fwithb"
+
+\end_inset
+
+) then we can write the oscillator strength as 
+\begin_inset Formula \begin{equation}\label{eq:osc_vel}
+f_{ij}^v = \frac{2}{3}\frac{1}{\Delta E_{ji}} \Bigg | \Braket{\psi_j | \sum_j\boldsymbol{\nabla}_j | \psi_i} \Bigg |^2.
+\end{equation}
+\end_inset
+
+in atomic units, and 
+\begin_inset Formula $\Delta E_{ji} = h\nu_{ji} = E_j - E_i$
+\end_inset
+
+. This is the velocity form of the oscillator strength, but other forms do exist. For example, the length form can be obtained using the commutation relation with the Hamiltonian, 
+\begin_inset Formula $[\boldsymbol{r},H] = i\boldsymbol{p}$
+\end_inset
+
+. Substitution of this into equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:osc_vel"
+
+\end_inset
+
+) we find that, 
+\begin_inset Formula \begin{equation}\label{eq:osc_len}
+f_{ij}^l = \frac{2}{3}\Delta E_{ji} \Bigg | \Braket{\psi_j | \sum_j\boldsymbol{r}_j | \psi_i} \Bigg |^2.
+\end{equation}
+\end_inset
+
+We would hope that these quantities are identical for exact wavefunctions, 
+\begin_inset Formula $f_{ij}^l =f_{ij}^v$
+\end_inset
+
+, but we have already seen that we need to truncate the basis expansion in equation (...). A good measure and check is to note the ratio between these two different definitions of the oscillator strengths should be equal to one. However, just because they are close or exact, does not necessarily infer correctness, and therefore an adequate sample of multiple oscillator strengths must be carried out. Another warning is that the commutation in the Hartree-Fock approximation does not hold due to the non-local potential 
+\begin_inset Formula $\mathcal{V}$
+\end_inset
+
+, however it is normally another accurate approximation that we can make.
+\end_layout
+
+\begin_layout Section
+
+\shape smallcaps
+civ3
+\family default
+\series default
+\shape default
+
+\end_layout
+
+\begin_layout Standard
+The method of configuration-interaction is implemented into the computer package 
+\shape smallcaps
+civ3
+\family default
+\series default
+\shape default
+ to obtain descriptions for atomic wavefunctions. We will briefly outline some of the major processes that can be computed.
+\end_layout
+
+\begin_layout Standard
+The Hamiltonian matrix defined in equation (...) is constructed by projecting the target states onto it. The angular integrals expressed in terms of the Spherical Harmonics are also evaluated here. Radial functions are expressed as Slater Type orbitals, already defined by equation (...), and their corresponding integrals are solved analytically.
+\end_layout
+
+\begin_layout Standard
+Eigenenergies are obtained by diagonalizing the Hamiltonian matrix and the eigenvector components represent the coefficients 
+\begin_inset Formula $c_i$
+\end_inset
+
+ in equation (...). It is possible to optimize the Slater Type orbital coefficients by minimizing select eigenvalue functionals, or combinations of eigenvalues.
+\end_layout
+
+\begin_layout Standard
+Configuration-iteration wavefunctions are constructed by including additional configurations into the expansion. There are numerous tests or indicators to check whether the wavefunctions actually produced meaningful results. The measurables defined by oscillator strengths and transition probabilities in Sections (...) and (...) respectively can be produced as we now have multiple states. These quantities along with the energy eigenvalues can be compared with observed or experimentally calculated results.
+\end_layout
+
+\begin_layout Section
+
+\shape smallcaps
+grasp0
+\family default
+\series default
+\shape default
+
+\end_layout
+
+\begin_layout Standard
+...
+\end_layout
+
+\begin_layout Section
+Dipole Selection Rules
+\end_layout
+
+\begin_layout Standard
+We have already stated that transitions between two states are of extreme importance in determining the photoionisation cross sections. However, not all transitions can be accounted for as certain rules must be adhered. Only transitions between specific angular momentum is possible which comes from a direct consequence of the dipole operator. Assuming that we have a transition of 
+\begin_inset Formula $\phi_i\rightarrow\phi_f$
+\end_inset
+
+, from an initial state i, into a final state j, then the following must hold in LS-coupling:
+\end_layout
+
+\begin_layout Itemize
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+A transition is only possible when initial and final states have opposing parity. That is, even 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ odd, or vice versa.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+The difference of total orbital angular momentum between 
+\begin_inset Formula $L_i$
+\end_inset
+
+ and 
+\begin_inset Formula $L_j$
+\end_inset
+
+ cannot exceed a difference of 1. Therefore 
+\begin_inset Formula $-1\leq\Delta L = |L_i - L_j|\leq 1$
+\end_inset
+
+. So for 
+\begin_inset Formula $L_i=2$
+\end_inset
+
+, then we have for the allowed vaues of 
+\begin_inset Formula $L_j=1,2,3$
+\end_inset
+
+. The only limitation to this rule is that the transition for 
+\begin_inset Formula $L_i=L_j=0$
+\end_inset
+
+ is not possible.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+The final rule is that the total spin angular momentum, S, must remain constant throughout between initial and final states. Therefore 
+\begin_inset Formula $S_i=S_j$
+\end_inset
+
+ must necessarily hold.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+There is one extra condition when considering an LSJ-coupling scheme. 
+\end_layout
+
+\begin_layout Itemize
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+We can now neglect the second and third points but the first must still hold in consideration of the parity. Then the total angular momentum between 
+\begin_inset Formula $J_i$
+\end_inset
+
+ and 
+\begin_inset Formula $J_j$
+\end_inset
+
+ cannot exceed a difference of 1. Again, we have the fact that 
+\begin_inset Formula $J_i=J_j=0$
+\end_inset
+
+ is not permitted.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Section
+Dipole Approximations
+\end_layout
+
+\begin_layout Standard
+Now that we have a means of extracting the initial and final state wave functions of a system then we are in a position to determine the photoionisation cross sections. They are in fact a measure of some transition from a bound state initially to some final free state. Thus the cross sections are obtained from the various information regarding the internal (bound) and the external (free) regions.
+\end_layout
+
+\begin_layout Standard
+We diverge momentarily to consider and introduce the following dipole matrices which are presented in two approximations given by their length and velocity, 
+\begin_inset Formula \[
+\mathbf{D}_L=\sum_r\mathbf{r}_n
+\]
+\end_inset
+
+
+\begin_inset Formula \[
+\mathbf{D}_V=-\sum_n\nabla_n
+\]
+\end_inset
+
+These are paramount when considering such an atomic system that we have which involves a photon, 
+\begin_inset Formula $\omega$
+\end_inset
+
+. The summation in both cases is to be carried over all electrons.
+\end_layout
+
+\begin_layout Standard
+We follow our analysis by adopting a convention introduced by Fano and Racah to recast the dipole matrices into some reduced dipole matrix (i||D||f). Where i and f are denoted respectively as the initial and final states of the system. Therefore, 
+\begin_inset Formula \begin{equation}
+(L_i||D||L_f)=\frac{\sqrt{2L_i+1}}{C(L_flL_i;M_{L_f}\mu)}<L_iM_{L_i}|D_l^\mu|L_fM_{L_f}>
+\end{equation}
+\end_inset
+
+Here we have denoted 
+\begin_inset Formula $L_i$
+\end_inset
+
+, 
+\begin_inset Formula $M_{L_i}$
+\end_inset
+
+ and 
+\begin_inset Formula $L_f$
+\end_inset
+
+, 
+\begin_inset Formula $M_{L_f}$
+\end_inset
+
+ to be the quantum numbers of the initial and final states and where C(..) is clearly a Clebsh-Gordon coefficient. The important thing to note here is that if 
+\begin_inset Formula $\mu=0$
+\end_inset
+
+ which signifies a dipole vector component, then the operator in (...) is either that of the dipole length or velocity operator.
+\end_layout
+
+\begin_layout Standard
+We can readily separate the reduced dipole matrix of (..) into two contributions, 
+\begin_inset Formula \[
+(i||\mathbf{D}||f)=D^{(I)}+D^{(0)}
+\]
+\end_inset
+
+in which 
+\begin_inset Formula $D^{(I)}$
+\end_inset
+
+ arises from the internal region (
+\begin_inset Formula $r\leq r_a$
+\end_inset
+
+), and similarly 
+\begin_inset Formula $D^{(0)}$
+\end_inset
+
+ arising from the external region (
+\begin_inset Formula $r\geq r_a$
+\end_inset
+
+). At this point it is then convenient to look at each of the contributions individually, so we proceed in the following manner.
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+protect
+\end_layout
+
+\end_inset
+
+
+\series bold
+Internal Region Contribution (
+\begin_inset Formula $D^{(I)}$
+\end_inset
+
+)
+\series default
+
+\begin_inset Newline newline
+\end_inset
+
+ We consider the expansion of two wave functions 
+\begin_inset Formula $\Psi_i$
+\end_inset
+
+ and 
+\begin_inset Formula $\Psi_f$
+\end_inset
+
+ with some expansion coefficients 
+\begin_inset Formula $A_{ik}$
+\end_inset
+
+ and 
+\begin_inset Formula $A_{fk'}$
+\end_inset
+
+ identical to that of (..). Therefore, 
+\begin_inset Formula \[
+D^{(I)}=(\psi_i||D^{(I)}||\psi_f)=\sum_{k, k'}A_{ik}M(k,k')A_{fk'}
+\]
+\end_inset
+
+where we have replaced, 
+\begin_inset Formula \begin{equation}
+\mathbf{M}=M(k,k')=(\psi_i||D^{(I)}||\psi_f)
+\end{equation}
+\end_inset
+
+To determine the matrix elements of 
+\begin_inset Formula $\mathbf{M}$
+\end_inset
+
+, it is possible to introduce a set of basis functions and coefficients 
+\begin_inset Formula $c_{ijk}$
+\end_inset
+
+ and 
+\begin_inset Formula $d_{jk}$
+\end_inset
+
+ similar to that of (..). The last remaining information required are the coefficients of 
+\begin_inset Formula $A_{ik}$
+\end_inset
+
+ and 
+\begin_inset Formula $A_{jk'}$
+\end_inset
+
+ which can be taken straight from (..) where we also set the parameter 
+\begin_inset Formula $b=0$
+\end_inset
+
+. Which is consistent when using the various codes later. The only difference is that we write the coefficients in their respective matrix from with the subscript 
+\begin_inset Formula $\eta$
+\end_inset
+
+ to distinguish between initial (=i) and final (=f) states, 
+\begin_inset Formula \[
+\mathbf{A}_\eta=A_{Ek}=\frac{\mathbf{w}_\eta^T\mathbf{R}_\eta^{-1}\mathbf{F}_\eta}{2a(E_k-E_\eta)}
+\]
+\end_inset
+
+To remain consistent, we write the energy depends coefficients in terms of some diagonal matrix, 
+\begin_inset Formula \[
+\mathbf{G}_\eta=G_{Ek}=[2a(E_k-E_\eta)]^{-1}
+\]
+\end_inset
+
+All of this together into equation (..) yields the final result for the interal contribution in matrix form, 
+\begin_inset Formula \[
+D^{(I)}=\mathbf{F}_i^{*T}\mathbf{R}_i^{-1}\mathbf{w}_i\mathbf{G}_i\mathbf{M}\mathbf{G}_f\mathbf{w}_f^T\mathbf{R}_f^{-1}\mathbf{F}_f
+\]
+\end_inset
+
+The only complication here is that the 
+\begin_inset Formula $\mathbf{F}$
+\end_inset
+
+ matrix can be defined for open channels (..) corresponding to a free state or closed channels (...) corresponding to a bound state.
+\end_layout
+
+\begin_layout Standard
+Now all that is left to consider is the external region 
+\begin_inset Formula $D^{(0)}$
+\end_inset
+
+ contribution in order to attempt a definition for the photoionisation cross section where we bring everything together.
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+protect
+\end_layout
+
+\end_inset
+
+
+\series bold
+External Region Contribution (
+\begin_inset Formula $D^{(0)}$
+\end_inset
+
+)
+\series default
+
+\begin_inset Newline newline
+\end_inset
+
+ Since we are now in the external region, it is possible to neglect antisymmetrization as the electron is now in the continuum, By considering the dipole length operator, it is possible to write, 
+\begin_inset Formula \[
+\mathbf{D}=\mathbf{T}+\mathbf{t}
+\]
+\end_inset
+
+where the introduced matrices 
+\begin_inset Formula $\mathbf{T}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{t}$
+\end_inset
+
+ represent transitions in the target and by an outer electron respectively. By defining, 
+\begin_inset Formula \[
+\alpha_{jj'}=(\bar{\Phi}_j||\mathbf{T}||\bar{\Phi}_{j'})
+\]
+\end_inset
+
+
+\begin_inset Formula \[
+\beta_{kk'}=(\bar{\Phi}_j||\mathbf{t}(hat)||\bar{\Phi}_{k'})
+\]
+\end_inset
+
+Then, 
+\begin_inset Formula \[
+D^{(0)}=\sum_{jj'}[\alpha_{jj'}(F_{ji}|F_{j'f})+\beta_{kk'}(F_{ji}|r|F_{j'f})]
+\]
+\end_inset
+
+where 
+\begin_inset Formula $\bar{\Psi}_{m/n}$
+\end_inset
+
+ are the regular channel functions as defined previously by eq (..). The solutions to (..) are described by Seaton for evaluating the required integrals. This completes the study of the dipole matrix elements. Therefore we can finally implement them to determine any required scattering observables.
+\end_layout
+
+\begin_layout Section
+Photoionization Cross Sections
+\end_layout
+
+\begin_layout Standard
+In this section we will be focused on covering some of the basic ideology behind atomic photoionisation and its analytic process. These methods have been well establish throughout the topic of atomic physics and are adopted to the likes of here.
+\end_layout
+
+\begin_layout Standard
+Various atoms and ions, although we will be considering numerical investigations of positive ions only, have a multitude of energy levels. These levels are referred to as discrete states of the system. As we have seen in the discussion of the solution to the TISE (..), the energy levels can be split into fine structure terms when considering the relativistic Hamiltonian, 
+\begin_inset Formula $H_{BP}^{N+1}$
+\end_inset
+
+. The Hamiltonian can be split further into two -body interactions but the contributions are becoming more and more negligible that we can neglect these for the purposes of completing a calculation.
+\end_layout
+
+\begin_layout Standard
+It is possible to label each energy level through the means of some representation of the distribution of electrons in terms of the quantum numbers 
+\begin_inset Formula $n$
+\end_inset
+
+ and 
+\begin_inset Formula $l$
+\end_inset
+
+. Each configuration contains at least one term as to how the angular momentum of each electron is distributed amongst the subshells. The relativistic effects can split the energy levels further depending on the total spin and orbital angular momentum according to the relation (...) L-S<J<L+S. Every atom/ion has a ground state which gives rise to the lowest possible energy. In general, the energy is always taken to be 0 and every other energy level of the system is therefore relative to it (this is the ground state energy).
+\end_layout
+
+\begin_layout Standard
+With this basic information it is now a good time to consider some atomic system denoted by A which can be present in any one of its atomic states. This atom/ion must absorb a photon of adequate energy to ionise the system to leave A in some excited state with the ejection of an electron into the continuum. The whole photoionisation process can be neatly and compactly written by the following formalism, 
+\begin_inset Formula \begin{equation}
+h\nu+A\rightarrow A^* \rightarrow A^+ +e^-
+\end{equation}
+\end_inset
+
+In order for this to occur we must assume that (following our ideology) A, at rest has some eigenenergy 
+\begin_inset Formula $E_i$
+\end_inset
+
+ as an initial state with corresponding eigenstate 
+\begin_inset Formula $\phi_i$
+\end_inset
+
+ from (...). Likewise, 
+\begin_inset Formula $A^+$
+\end_inset
+
+ is left in some final state 
+\begin_inset Formula $\phi_f$
+\end_inset
+
+ with corresponding eigenenergy 
+\begin_inset Formula $E_f$
+\end_inset
+
+. Finally, the electron emitted, otherwise known as a photoelectron, leaves the newly formed ion with some momentum 
+\begin_inset Formula $\mathbf{k}_f$
+\end_inset
+
+. We approach this problem like a before (LHS of .. ) and after (RHS of ..) scenario and thus energy conservation must hold. In the adopted atomic units we can write, 
+\begin_inset Formula \[
+h/nu+E_i=\frac{1}{2}k_f^2+E_f
+\]
+\end_inset
+
+Talk about resonances.
+\end_layout
+
+\begin_layout Standard
+Finally understanding both equations (..) and (..) gives us a proper feel of where things are going and the importance of photoionisation cross sections. since the photon energy is a direct link to the frequency, we can start to investigate various properties that arise from a range of different frequencies. This can provide multiple results which grealy advances the important research that is taking place in ares such as atomic physics and their structure. These theoretical calculations are very accurate and provide experimental agreement in order to help build the certainty in major results.
+\end_layout
+
+\begin_layout Standard
+We are now in a position to express a formula to accurately describe the photoionisation cross sections for specific transitions. It is wise to begin by defining the generalised line strength between an initial and final state i and f in the two approximations. Therefore, the dipole transition can be noted by, 
+\begin_inset Formula \[
+S_L(E_f;i)=\sum_{L,l_f}|(Ll_fE_f||D_L||i)|^2
+\]
+\end_inset
+
+
+\begin_inset Formula \[
+S_V(E_f;i)=4(E_f-E_i)^{-2}|(f||D_V||i)|^2
+\]
+\end_inset
+
+as a side note, it is possible to define the oscillator strengths using simplified versions of these definitions. However, we will focus our attention to the problem at hand. The transition is between the bound state i of energy 
+\begin_inset Formula $E_i$
+\end_inset
+
+ to some free state f, which has a final energy of 
+\begin_inset Formula $E_f=E_i+\omega$
+\end_inset
+
+ where 
+\begin_inset Formula $\omega$
+\end_inset
+
+ is the photon energy seen in equation (..).
+\end_layout
+
+\begin_layout Standard
+The photoionisation cross sections are then defined in either length or velocity approximations by, 
+\begin_inset Formula \begin{equation}
+\sigma_\eta=\frac{4}{3}\pi^2a_0^2\alpha\frac{\omega}{g_i}S_\eta
+\end{equation}
+\end_inset
+
+for 
+\begin_inset Formula $\eta=L, V$
+\end_inset
+
+ being the different formula giving rise to (..). Where 
+\begin_inset Formula $g_i$
+\end_inset
+
+ is the statistical weight of the bound state and 
+\begin_inset Formula $\sigma_L\approx\sigma_V$
+\end_inset
+
+. These are generally only equal whenever exact wave functions are used which is basically an impossible task to compute. We make the best approximations possible with the computer resources available which more often than not give excellent agreement with one another.
+\end_layout
+
+\begin_layout Section
+Inclusion Of Relativistic Effects
+\end_layout
+
+\begin_layout Standard
+Up to now we have simply worked with the non-relativistic Hamiltonian, 
+\begin_inset Formula $H_{NR}$
+\end_inset
+
+ defined by (..). We have however considered what the extra matrix elements are by equation (..). It is possible to start from scratch with the Dirac equation and redevelop the R-matrix Theory. We don't necessarily need, or want to reinvent the wheel as such, so we can consider the Breit-Pauli Hamiltonian, 
+\begin_inset Formula $H_{BP}$
+\end_inset
+
+ instead which is essentially just a perturbation to the non-relativistic Hamiltonian. Since the R-matrix has been established for 
+\begin_inset Formula $H_{NR}$
+\end_inset
+
+, we are now in a position to include the remaining terms. In general, the effects will not be as large, but for accurate calculations then they must be included. Thanks to Scott and Burke, we are now able to adapt the theory to include these effects.
+\end_layout
+
+\begin_layout Standard
+We noticed that when we split the Hamiltonian into fine and non-fine structure terms that 
+\begin_inset Formula $H_{ifs}$
+\end_inset
+
+ commutes with the operators 
+\begin_inset Formula $\mathbf{L}^2$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{L}_z$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{S}^2$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{S}_z$
+\end_inset
+
+. The main problem arises from the spin-orbit coupling 
+\begin_inset Formula $H_{fs}$
+\end_inset
+
+ which only commutes with the recently introduced 
+\begin_inset Formula $\mathbf{J}^2$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{J}_z$
+\end_inset
+
+, with similar eigenvalues to the other operators. As discussed, the total spin and orbital angular momentum L and S are able to add vectorially to give J.
+\end_layout
+
+\begin_layout Standard
+The only difference now is that we must diagonlise this new Hamiltonian. In doing so can drastically increase the time it takes to complete a calculation as these matrices are of large order and difficult to perform. This will be discussed later in Section (..) when looking at the description of the codes.
+\end_layout
+
+\begin_layout Standard
+In order to proceed, a pair coupling scheme is intro ducted, defined by, 
+\begin_inset Formula \[
+\mathbf{J}_i+\mathbf{l}=\mathbf{k}
+\]
+\end_inset
+
+
+\begin_inset Formula \[
+\mathbf{k}+\mathbf{1/2}=\mathbf{J}
+\]
+\end_inset
+
+introduced and discussed by Racah. In equation (...), 
+\begin_inset Formula $\mathbf{J}_i$
+\end_inset
+
+ is the total angular momentum of the N-electron target state added vectorially with the orbital angular momentum of the continuum electron. 
+\begin_inset Formula $\mathbf{J}$
+\end_inset
+
+ is the total angular momentum of the system and 
+\begin_inset Formula $\mathbf{1/2}$
+\end_inset
+
+ represents the spin.
+\end_layout
+
+\begin_layout Standard
+The Hamiltonian and dipole matrix elements are first calculated in the usual way via an LS-coupled scheme then to a pair-coupling scheme with an appropriate unitary transformation. Therefore, using these modified matrix elements, it is possible to compute photoionisation cross sections in a similar method.
+\end_layout
+
+\begin_layout Standard
+The easiest way to proceed is to split the Hamiltonian into 3 separate blocks and then evaluate each of the matrix elements. It is convenient to look at the following various types of matrix elements.
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+protect
+\end_layout
+
+\end_inset
+
+
+\series bold
+Bound-Bound
+\series default
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula \[
+(LS_jJ\pi|H_{BP}^{N+1}|L'S';J\pi)=(LS;J\pi|H_{SO}^{N+1}|L'S';J\pi)+\delta_{LL'}\delta_{SS'}(LS\pi|H_{nfs}^{N+1}|LS\pi)
+\]
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+protect
+\end_layout
+
+\end_inset
+
+
+\series bold
+Bound-Continuum
+\series default
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula \[
+\begin{split}
+(LS;J\pi|H_{BP}^{N+1}|\Delta_i(J_il_i)k_i1/2;J\pi)=\sum{L'S'C_iL_iS_i}&C(\Delta_iJ_i;C_iL_iS_il_ik_i1/2L'S';J\pi)\\
+&\text{x} [(LS;J\pi|H_{SO}^{N+1}|C_i(L_il_i)L'(S_i1/2)S';J\pi)\\
+&+\delta_{LL'}\delta_{SS'}(LS\pi|H_{nfs}^{N+1}|C_i(L_il_i)L(S_i1/2)S\pi)]
+\end{split}
+\]
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+protect
+\end_layout
+
+\end_inset
+
+
+\series bold
+Continuum-Continuum
+\series default
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula \[
+\begin{split}
+(\Delta_i(J_il_i)&k_i1/2,J\pi|H_{BP}^{N+1}|\Delta_j(J_jl_j)k_j1/2;J\pi)=\\
+&\sum_{LL'SS'C_iL_iS_iC_jL_jS_j}C(\Delta_iJ_i;C_iL_iS_il_ik_i1/2LS;J\pi)C(\Delta_jJ_j;C_jL_jS_jl_jk_j1/2L'S';J\pi)\\
+&\text{x}[(C_i(L_il_i)L(S_i1/2)S;J\pi|H_{SO}^{N+1}|C_j(L_jl_j)L(S_j1/2)S';J\pi)\\
+&+\delta_{LL'}\delta_{SS'}(C_i(L_il_i)L(Si_1/2)S\pi|H_{nfs}^{N+1}|C_j(L_jl_j)L(S_j1/2)S\pi)]\\
+\end{split}
+\]
+\end_inset
+
+where, 
+\begin_inset Formula \[
+\begin{split}
+C(\Delta_iJ_i;C_iL_iS_il_ik_i1/2LS;j\pi)=&B^{J\pi}(\Delta_iJ_i;C_iL_iS_i) . (2J_i+1)(2L+1)(2k_i+1)(2S_i+1)\\
+&\text{x}W(Ll_iS_iJ_i;L_ik_i)W(LJS_i1/2;Sk_i)
+\end{split}
+\]
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+protect
+\end_layout
+
+\end_inset
+
+
+\series bold
+Long-Range Potential Coefficients
+\series default
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula \[
+\begin{split}
+a_{ij}^\lambda=&\Big<\Delta_i(J_il_i)k_i1/2;J\pi|\sum_{n=1}^Nr_n^\lambda P_\lambda(\cos\theta_{n,N+1}|\Delta_j(J_jl_j)k_j1/2;J\pi)\Big>\\
+&=\sum_{LSC_iL_iS_iC_jL_jS_j}C(\Delta_iJ_i;C_iL_iS_il_ik_i1/2LS;J\pi)C(\Delta_jJ_j;C_jL_jS_jl_jk_j1/2L'S';J\pi)\\
+&\text{x}\Big<C_i(L_il_i)L(S_i1/2)S;J\pi|\sum_{n=1}^Nr_n^\lambda P_\lambda(\cos\theta_{n,N+1}|C_j(L_jl_j)L'(S_j1/2)S';J\pi)\Big>
+\end{split}
+\]
+\end_inset
+
+and finally, the dipole matrix elements are also split into the three separate blocks in a similar fashion.
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%----------------------------------------------------------------------------------------
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

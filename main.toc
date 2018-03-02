@@ -1,0 +1,79 @@
+\contentsline {chapter}{Contents}{iv}{dummy.4}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.6}
+\contentsline {section}{\numberline {1.1}Motivation}{1}{section.7}
+\contentsline {chapter}{\numberline {2}Building a many electron model}{6}{chapter.8}
+\contentsline {section}{\numberline {2.1}Schr\"odinger equation for a one-electron system}{6}{section.9}
+\contentsline {section}{\numberline {2.2}The Hamiltonian for a many electron system}{8}{section.15}
+\contentsline {section}{\numberline {2.3}The Breit-Pauli Hamiltonian}{10}{section.23}
+\contentsline {section}{\numberline {2.4}Approximate solutions to the Schr\"odinger\\ equation}{12}{section.30}
+\contentsline {subsection}{\numberline {2.4.1}Central-field approximation and Hartree's method}{12}{subsection.31}
+\contentsline {subsection}{\numberline {2.4.2}Hartree-Fock approximation}{15}{subsection.41}
+\contentsline {subsection}{\numberline {2.4.3}The configuration-interaction method}{18}{subsection.51}
+\contentsline {section}{\numberline {2.5}Transition probabilities}{20}{section.57}
+\contentsline {section}{\numberline {2.6}Oscillator strengths}{22}{section.65}
+\contentsline {section}{\numberline {2.7}{\sc civ3}}{25}{section.73}
+\contentsline {section}{\numberline {2.8}{\sc grasp0}}{26}{section.74}
+\contentsline {section}{\numberline {2.9}Alternative computer packages}{27}{section.78}
+\contentsline {subsection}{\numberline {2.9.1}The Cowan code}{28}{subsection.79}
+\contentsline {subsection}{\numberline {2.9.2}Multi-configuration Hartree-Fock - {\sc mchf}}{28}{subsection.80}
+\contentsline {subsection}{\numberline {2.9.3}{\sc autostructure}}{29}{subsection.81}
+\contentsline {section}{\numberline {2.10}Selecting configurations}{29}{section.82}
+\contentsline {section}{\numberline {2.11}Selection rules}{31}{section.84}
+\contentsline {chapter}{\numberline {3}The $R$-matrix method}{33}{chapter.85}
+\contentsline {section}{\numberline {3.1}Photon and electron interactions}{33}{section.86}
+\contentsline {section}{\numberline {3.2}$R$-matrix theory}{34}{section.89}
+\contentsline {section}{\numberline {3.3}Describing the target}{37}{section.91}
+\contentsline {section}{\numberline {3.4}The internal region}{38}{section.94}
+\contentsline {subsection}{\numberline {3.4.1}The Buttle correction}{42}{subsection.109}
+\contentsline {section}{\numberline {3.5}The external region}{43}{section.113}
+\contentsline {section}{\numberline {3.6}Matching of solutions}{45}{section.121}
+\contentsline {subsection}{\numberline {3.6.1}Open channels}{45}{subsection.122}
+\contentsline {subsection}{\numberline {3.6.2}Closed channels - bound states}{47}{subsection.129}
+\contentsline {section}{\numberline {3.7}Electron-impact excitation}{47}{section.132}
+\contentsline {section}{\numberline {3.8}Photoionization}{50}{section.141}
+\contentsline {section}{\numberline {3.9}Dipole approximations}{52}{section.149}
+\contentsline {section}{\numberline {3.10}Inclusion of relativistic effects}{54}{section.155}
+\contentsline {subsection}{\numberline {3.10.1}Via the Breit-Pauli operator}{54}{subsection.156}
+\contentsline {subsection}{\numberline {3.10.2}Via the Dirac operator}{55}{subsection.159}
+\contentsline {section}{\numberline {3.11}The $R$-matrix codes}{57}{section.161}
+\contentsline {subsection}{\numberline {3.11.1}Parallel Breit-Pauli codes}{58}{subsection.163}
+\contentsline {subsection}{\numberline {3.11.2}Parallel Dirac atomic $R$-matrix codes}{63}{subsection.164}
+\contentsline {section}{\numberline {3.12}The $QB$ method}{64}{section.165}
+\contentsline {chapter}{\numberline {4}Spectral modelling for astrophysics}{66}{chapter.173}
+\contentsline {section}{\numberline {4.1}Introduction}{66}{section.174}
+\contentsline {section}{\numberline {4.2}Collisional radiative modelling}{66}{section.176}
+\contentsline {section}{\numberline {4.3}Implementation}{69}{section.186}
+\contentsline {subsection}{\numberline {4.3.1}Test case: Ar$^+$}{70}{subsection.187}
+\contentsline {section}{\numberline {4.4}Radiative and dielectronic recombination rate coefficients}{73}{section.190}
+\contentsline {chapter}{\numberline {5}Single photoionization and resonance identification of S$^{8+}$}{76}{chapter.196}
+\contentsline {section}{\numberline {5.1}Introduction}{76}{section.197}
+\contentsline {section}{\numberline {5.2}Target model}{78}{section.203}
+\contentsline {section}{\numberline {5.3}Results and discussions}{81}{section.204}
+\contentsline {section}{\numberline {5.4}Resonance identification}{88}{section.211}
+\contentsline {section}{\numberline {5.5}Conclusions}{94}{section.216}
+\contentsline {chapter}{\numberline {6}Valence and L$_{2}$-shell photoionization of Ar$^+$ using relativistic and semi-relativistic approaches}{97}{chapter.219}
+\contentsline {section}{\numberline {6.1}Introduction}{97}{section.220}
+\contentsline {section}{\numberline {6.2}Structure model}{99}{section.221}
+\contentsline {section}{\numberline {6.3}Results}{107}{section.231}
+\contentsline {subsection}{\numberline {6.3.1}Valence shell photoionization}{109}{subsection.234}
+\contentsline {subsection}{\numberline {6.3.2}L$_{2}$-shell photoionization}{115}{subsection.239}
+\contentsline {section}{\numberline {6.4}Conclusions}{120}{section.243}
+\contentsline {chapter}{\numberline {7}Photoionization of Co$^{+}$ and electron-impact excitation of Co$^{2+}$}{122}{chapter.244}
+\contentsline {section}{\numberline {7.1}Introduction}{122}{section.245}
+\contentsline {section}{\numberline {7.2}Important transitions for synthetic spectral\\ modelling}{124}{section.246}
+\contentsline {subsection}{\numberline {7.2.1}Target description and bound state transitions}{125}{subsection.248}
+\contentsline {subsection}{\numberline {7.2.2}Photoionization}{129}{subsection.252}
+\contentsline {subsection}{\numberline {7.2.3}Electron-impact excitation}{130}{subsection.254}
+\contentsline {section}{\numberline {7.3}Results}{130}{section.255}
+\contentsline {subsection}{\numberline {7.3.1}Photoionization}{130}{subsection.256}
+\contentsline {subsection}{\numberline {7.3.2}Electron-impact excitation}{136}{subsection.261}
+\contentsline {subsection}{\numberline {7.3.3}Collisional radiative modelling}{142}{subsection.268}
+\contentsline {section}{\numberline {7.4}Conclusion}{148}{section.273}
+\contentsline {chapter}{\numberline {8}Conclusions}{150}{chapter.275}
+\contentsline {section}{\numberline {8.1}Sulphur}{151}{section.276}
+\contentsline {section}{\numberline {8.2}Argon}{151}{section.277}
+\contentsline {section}{\numberline {8.3}Cobalt}{153}{section.278}
+\contentsline {section}{\numberline {8.4}Future work - A study of neutral nickel}{154}{section.279}
+\contentsline {chapter}{Appendix \numberline {A}{\sc collr-v1.0}}{159}{Appendix.284}
+\vspace {2em}
+\contentsline {chapter}{Bibliography}{182}{dummy.287}
